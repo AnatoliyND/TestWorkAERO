@@ -1,0 +1,21 @@
+{{ define "save_Booking" }}
+
+{{ template "header" }}
+<main role="main" class="inner cover">
+    <h1 class="cover-heading">Форма бронирования столиков.</h1>
+    <form action="/save_Booking" method="post">
+        <input type="text" name="nameR" id="nameR" placeholder="Введите название ресторана"
+        class="form-control"><br>
+        <textarea name="name" id="name" class="form-control" placeholder="Введите имя клиента"></textarea><br>
+        <textarea name="phone" id="phone" class="form-control" placeholder="Введите номер телефона клиента(+7 xxx xxx xx xx)"></textarea><br>
+        <textarea name="person" id="person" class="form-control" placeholder="Введите количество требуемых мест"></textarea><br>
+        <textarea name="visit" id="visit" class="form-control" placeholder="Введите время бронирования(4:30 PM)"></textarea><br>
+
+        <button class="btn btn-warning">Забронировать</button>
+    </form>
+
+</main>
+
+{{ template "footer" }}
+
+{{ end }}
