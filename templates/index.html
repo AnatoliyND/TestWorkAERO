@@ -3,22 +3,18 @@
 {{ template "header" }}
 <main role="main" class="inner cover">
     <h1 class="cover-heading">Главная страница.</h1>
-    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, provident. Quam nam quae velit reprehenderit praesentium veritatis, 
-    vero molestias officia et tenetur tempore beatae, obcaecati magnam incidunt dolores perspiciatis sint.</p>
+    <p class="lead">Сложно сказать, почему непосредственные участники технического прогресса могут быть описаны максимально подробно.
+        Не следует, однако, забывать, что постоянный количественный рост и сфера нашей активности прекрасно подходит для реализации форм воздействия.
+        В целом, конечно, базовый вектор развития прекрасно подходит для реализации экономической целесообразности принимаемых решений.</p>
 
-    <h1 class="cover-heading">Подборка десторана.</h1>
-    <form action="/save_article" method="post">
-        <input type="text" name="title" id="title" placeholder="Введите количество требуемых мест"
-        class="form-control"><br>
-        <input type="text" name="title" id="title" placeholder="Введите время посещения"
-        class="form-control"><br>
-        <button class="btn btn-warning">Подобрать ресторан</button>
-    </form>
     {{ range . }}
     <div class="alert alert-danger">
-        <h2>{{ .Title }}</h2>
-        <p>{{ .Anons }}</p>
-        <a href="/post/{{ .Id }}" class="btn btn-danger">Читать далее</a>
+        <h2>{{ .NameRestauran }}</h2>
+        <p>{{ .FreeTables }}</p>
+        <p>{{ .ReservedTables }}</p>
+        <p>{{ .WaitingForCooking }}</p>
+        <p>{{ .AverageChek }}</p>
+        <a href="/" class="btn btn-danger">Читать далее</a>
     </div>
 
     {{ else }}
