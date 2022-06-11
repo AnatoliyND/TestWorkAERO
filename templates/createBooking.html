@@ -1,0 +1,23 @@
+{{ define "createBooking" }}
+
+{{ template "header" }}
+<main role="main" class="inner cover">
+    <h1 class="cover-heading">Форма бронирования столиков.</h1>
+    <form action="/save_article" method="post">
+        <input type="text" name="nameR" id="nameR" placeholder="Введите название ресторана"
+        class="form-control"><br>
+        <input type="text" name="name" id="name" placeholder="Введите имя клиента"
+        class="form-control"><br>
+        <input type="text" name="phone" id="phohe" placeholder="Введите номер телефона клиента"
+        class="form-control"><br>
+        <input type="text" name="person" id="person" placeholder="Введите количество требуемых мест"
+        class="form-control"><br>
+
+        <button class="btn btn-warning">Забронировать</button>
+    </form>
+
+</main>
+
+{{ template "footer" }}
+
+{{ end }}
